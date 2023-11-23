@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* --------------------------------------GENERAL----------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    display:flex;
+    width:100%;
+    margin-left:30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff1e1;
+    align-items: center;
+}
+
+/* --------------------------------------NAVBAR----------------------------------------- */
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo-navbar{
+    max-width: 100px;
+    margin-left: 10px;
+}
+
+.liens-navbar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.lien a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #1d3c45;
+}
+
+.lien a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #d2601a;
+    transition: all 0.3s ease;
+}
+
+.lien a:hover::after{
+    width: 70%;
+}
+
+.bouton a{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d2601a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bouton a:hover{
+    background-color: #df844c;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #d2601a;
+    z-index: -100;
+}
+
+.conteneur{
+    max-width: 1100px;
+    padding: 2rem 2rem;
+    align-items: center;
+}
+
+/* --------------------------------------SECTION CENTRALE PRINCIPALE----------------------------------------- */
+
+.glass-conteneur{
+    display:block;
+    max-width: 70vw;
+    height: 700px;
+    margin-top: 2vw;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.56);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+
+}
+
+header .contenu h1{
+    margin-bottom: 1rem;
+    color: #fff1e1;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+header .contenu p{
+    text-align: left;
+    color:#fff1e1;
+    font-weight: 200;
+
+    
+}
+
+header .bouton{
+    position:absolute;
+    bottom: 45px;
+    right:35px;
+}
+
+/*--------------------------- SECTION AVEC CARTES--------------------------  */
+
+section{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #1d3c45;
+}
+
+.parametres{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.parametres .card{
+    background-color: #1d3c45;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.parametres .card:hover{
+    background-color: #304e57;
+    border-color: #fff;
+}
+
+.parametres .card span{
+    display: inline-block;
+    align-items: center;
+    background-color: #d2601a;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.parametres .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.parametres .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.parametres .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.parametres .card a:hover{
+    color: #d2601a;
+}
+
+/*--------------------------------- FOOTER---------------------------- */
+
+/*On remet le css pour le footer
+  Solution en attendant une meilleure organisation du site. */
+footer{
+    position:static; /*Ne doit pas dependre du conteneur*/
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .column{
+  
+    margin-left:auto;
+    margin-right:auto;
+}
+
+footer .column h3{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #1d3c45;
+    font-size: 1rem;
+    font-weight: 1000;
+   
+}
+
+
+footer .column .socials{
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+    align-items: center;
+    gap:10rem;
+}
+
+footer .column .socials a{
+    color: #d2601a;
+    border: 1px solid #1d3c45;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #1d3c45;
+    background-color: #b7b8bc;
+    border-color: #b7b8bc;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #1d3c45;
+    font-size: 0.8rem;
+    text-align: center;
+}
